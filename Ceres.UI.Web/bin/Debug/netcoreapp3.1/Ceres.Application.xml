@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ceres.Application</name>
+    </assembly>
+    <members>
+        <member name="P:Ceres.Application.ViewModels.GetServiceByNameRequest.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+    </members>
+</doc>

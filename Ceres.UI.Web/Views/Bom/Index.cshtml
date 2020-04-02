@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BomFoodMainViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<h2>食材列表</h2>
+@foreach (var bomFoodMain in Model)
+{
+    <div>@bomFoodMain.OID</div>
+    <div>@bomFoodMain.Name</div>
+}

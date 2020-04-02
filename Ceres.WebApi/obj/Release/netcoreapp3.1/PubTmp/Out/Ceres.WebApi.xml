@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ceres.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Ceres.WebApi.AuthHelper.Appsettings">
+            <summary>
+            appsettings.json操作类
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.AuthHelper.Appsettings.app(System.String[])">
+            <summary>
+            封装要操作的字符
+            </summary>
+            <param name="sections">节点配置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.AuthHelper.OverWrite.JwtHelper.IssueJwt(Ceres.WebApi.AuthHelper.OverWrite.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.AuthHelper.OverWrite.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.AuthHelper.OverWrite.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.AuthHelper.OverWrite.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.AuthHelper.OverWrite.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.AuthHelper.OverWrite.TokenModelJwt.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.AgenterListController">
+            <summary>
+            代理列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.AgenterListController.Get">
+            <summary>
+            获取所有有效的代理列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.AgenterListController.QueryAgenterList(System.String)">
+            <summary>
+            按照代理名称查询代理列表
+            </summary>
+            <param name="agenterName">代理名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.CustomerController">
+            <summary>
+            客户
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.Post(Ceres.Application.ViewModels.CreateOneCustomerRequest)">
+            <summary>
+            新增一个客户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.Get(System.Guid)">
+            <summary>
+            获取指定客户基本信息
+            </summary>
+            <param name="oid">客户OID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetWeightList(System.Guid,System.Int32)">
+            <summary>
+            获取指定客户的体重列表，客服网页版使用
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="dataCount">获取最新的数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetWXWeightList(System.Guid,System.Int32)">
+            <summary>
+            获取指定客户的体重列表，小程序客户使用
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="dataCount">获取最新的数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetBMIList(System.Guid,System.Int32)">
+            <summary>
+            获取指定客户的BMI列表
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="dataCount">获取最新的数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetPhysiqueList(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定客户的所有体质测试结果列表------来源于Mercury程序中【TraditionalMedicalConstitutionController】
+            </summary>
+            <param name="oid"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetPhysique(System.Guid)">
+            <summary>
+            获取指定客户的体质测试结果------来源于Mercury程序中【TraditionalMedicalConstitutionController】
+            </summary>
+            <param name="oid">客户OID</param>
+            <returns>返回最新体质测试结果</returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetDailyEnergy(System.Guid)">
+            <summary>
+            获取指定客户的每日理想总能量
+            </summary>
+            <param name="oid">客户OID</param>
+            <returns>返回最新体质测试结果</returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetOneVIPCustomer(System.String)">
+            <summary>
+            查询指定手机号是否为VIP用户
+            </summary>
+            <param name="cellphone">用户手机号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetOneCustomerTodayPhysique(System.String)">
+            <summary>
+            查询用户今天是否可以执行体脂测试
+            </summary>
+            <param name="cellphone">用户手机号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetRandomString(System.String)">
+            <summary>
+            微信授权获取随机数
+            </summary>
+            <param name="code">微信code</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.CustomerController.GetCellphone(Ceres.Application.ViewModels.WeChatGetCellphoneRequest)">
+            <summary>
+            微信授权获取手机号
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Customer.CustomerListController">
+            <summary>
+            客户列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Customer.CustomerListController.Get(System.Int32,System.Int32)">
+            <summary>
+            分页获取所有有效的客户列表
+            </summary>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Customer.CustomerListController.Get(System.String,System.String,System.Guid,System.Guid,System.Guid,System.Int32,System.Int32)">
+            <summary>
+            条件分页获取所有有效的客户列表
+            </summary>
+            <param name="customerName">客户名称</param>
+            <param name="cellphone">客户手机号</param>
+            <param name="serviceOid">服务OID</param>
+            <param name="supporterOid">客服OID</param>
+            <param name="agenterOid">代理OID</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Customer.OriginalCustomerController">
+            <summary>
+            未筛选的客户
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Customer.OriginalCustomerController.Get(System.String)">
+            <summary>
+            获取指定的客户信息
+            </summary>
+            <param name="cellphone">用户手机号码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Ding.DingController">
+            <summary>
+            打卡
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingController.PostDing(Ceres.Application.ViewModels.CreateOneCustomerAssistDingRequest)">
+            <summary>
+            新增一条协助打卡数据，客服网页版使用
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingController.PostCustomerDing(Ceres.Application.ViewModels.CreateOneCustomerDingRequest)">
+            <summary>
+            新增一条打卡数据，小程序客户使用
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingController.DeleteDing(Ceres.Application.ViewModels.DeleteOneCustomerAssistDingRequest)">
+            <summary>
+            删除一条协助打卡数据
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingController.UploadStreamPic">
+            <summary>
+            上传打卡图片，支持批量处理，Stream方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingController.UploadBase64Pic(Ceres.Application.ViewModels.UploadDingPicRequest)">
+            <summary>
+            上传打卡图片，支持批量处理，Base64方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingController.GetOneCustomerTodayDing(System.Guid)">
+            <summary>
+            查询用户今天打卡详情
+            </summary>
+            <param name="customerOid">用户OID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Ding.DingListController">
+            <summary>
+            打卡列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Ding.DingListController.GetOneCustomerDingList(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定客户的所有打卡列表
+            </summary>
+            <param name="customerOid">客户OID</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Food.CompoundFoodController">
+            <summary>
+            配餐
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.CompoundFoodController.GetComponentPercentage">
+            <summary>
+            获取每日3大营养素百分比
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.CompoundFoodController.GetDailyFoodComponent(System.Single,System.String,System.Single,System.String,System.Single,System.String,System.Single)">
+            <summary>
+            获取每日九宫格g数据，343方式分配
+            </summary>
+            <param name="dailyEnergy">每日理想体重所需热量数（kcal/kg）</param>
+            <param name="pNameCode">蛋白质</param>
+            <param name="pValue">蛋白质百分比数值，不包括%</param>
+            <param name="fNameCode">脂肪</param>
+            <param name="fValue">脂肪百分比数值，不包括%</param>
+            <param name="cNameCode">碳水化合物</param>
+            <param name="cValue">碳水化合物百分比数值，不包括%</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.CompoundFoodController.GetRecommendFood(System.Guid,System.String,System.Single,System.Int32)">
+            <summary>
+            获取指定客户的推荐食材
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="nameCode">营养成分简称</param>
+            <param name="componentValue">营养成分数值</param>
+            <param name="dataCount">获取数量，单类型食材数量</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Food.DietController">
+            <summary>
+            食谱
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.DietController.PostDiet(Ceres.Application.ViewModels.CreateOneCustomerDietRequest)">
+            <summary>
+            新增一条食谱
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.DietController.DeleteDiet(Ceres.Application.ViewModels.DeleteOneCustomerDietRequest)">
+            <summary>
+            删除一条食谱
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Food.DietListController">
+            <summary>
+            食谱列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.DietListController.GetOneCustomerDietList(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定客户的所有食谱列表
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.DietListController.GetDietList(System.Int32,System.Int32)">
+            <summary>
+            分页获取所有食谱列表
+            </summary>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.DietListController.GetConditionDietList(System.String,System.String,System.Guid,System.Guid,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            条件分页获取所有有效的食谱列表
+            </summary>
+            <param name="customerName">客户名称</param>
+            <param name="cellphone">客户手机号</param>
+            <param name="serviceOid">服务OID</param>
+            <param name="supporterOid">客服OID</param>
+            <param name="startTime">查询开始时间</param>
+            <param name="endTime">查询截至时间</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Food.FoodListController">
+            <summary>
+            食材列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.FoodListController.Get(System.String,System.Single,System.Int32,System.Int32)">
+            <summary>
+            条件分页获取所有有效的食材列表
+            </summary>
+            <param name="foodName">食材名称</param>
+            <param name="foodValue">食材数值</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.FoodListController.Get(System.Guid,System.String,System.Int32,System.Int32)">
+            <summary>
+            条件分页获取所有有效的带客户是否喜欢标识的食材列表
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="foodName">食材名称</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.FoodListController.GetDislikeFood(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定客户不喜欢的食材列表
+            </summary>
+            <param name="oid">客户OID</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.FoodListController.PostDiet(Ceres.Application.ViewModels.CreateOneCustomerDislikeFoodRequest)">
+            <summary>
+            新增多条客户不喜欢的食材列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Food.FoodListController.PostDiet(Ceres.Application.ViewModels.DeleteOneCustomerDislikeFoodRequest)">
+            <summary>
+            删除多条客户不喜欢的食材列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.Service.ServiceListController">
+            <summary>
+            服务列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.Service.ServiceListController.Get">
+            <summary>
+            获取所有有效的服务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.LoginController">
+            <summary>
+            客服登陆
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.LoginController.Post(Ceres.Application.ViewModels.SupporterLoginRequest)">
+            <summary>
+            客服登陆
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.ResetPasswordController">
+            <summary>
+            客服密码
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.ResetPasswordController.Post(Ceres.Application.ViewModels.UpdateSupporterPasswordRequest)">
+            <summary>
+            更新客服密码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.SupporterController">
+            <summary>
+            客服
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.SupporterController.GetTodoDietList(System.Guid,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定客服在指定日期下的所有未完成的配餐代办事项
+            </summary>
+            <param name="supporterOid">客服OID</param>
+            <param name="dateTime">指定日期</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.SupporterController.GetTodoDietListCount(System.Guid,System.DateTime)">
+            <summary>
+            获取指定客服在指定日期下的所有未完成的配餐代办事项总数量
+            </summary>
+            <param name="supporterOid">客服OID</param>
+            <param name="dateTime">指定日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.SupporterController.GetTodoDingList(System.Guid,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定客服在指定日期下的所有未完成的打卡代办事项
+            </summary>
+            <param name="supporterOid">客服OID</param>
+            <param name="dateTime">指定日期</param>
+            <param name="pageIndex">页码索引，从1开始</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.SupporterController.GetTodoDingListCount(System.Guid,System.DateTime)">
+            <summary>
+            获取指定客服在指定日期下的所有未完成的打卡代办事项总数量
+            </summary>
+            <param name="supporterOid">客服OID</param>
+            <param name="dateTime">指定日期</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Controllers.SupporterListController">
+            <summary>
+            客服列表
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.Controllers.SupporterListController.Get">
+            <summary>
+            获取所有有效的客服列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.Extensions.AutoMapperSetup">
+            <summary>
+            AutoMapper 的启动服务
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.WebApiResultEntity`1.success">
+            <summary>
+            操作是否成功，response是否可以解析
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.WebApiResultEntity`1.token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.WebApiResultEntity`1.message">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:Ceres.WebApi.WebApiResultEntity`1.response">
+            <summary>
+            返回数据集合
+            </summary>
+        </member>
+        <member name="M:Ceres.WebApi.OSSHelper.TencentHelper.UploadToTencent(System.String,System.String)">
+            <summary>
+            上传文件到腾讯云中
+            </summary>
+            <param name="srcFilePath">本地绝对路径，包括文件后缀，比如 C:/Test/test.jpg</param>
+            <param name="desFilePath">腾讯云相对路径，存储桶后面的路径，包括文件后缀，比如 /Test/test.jpg</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.WebApi.OSSHelper.TencentHelper.CheckTencentFileIsExists(System.String)">
+            <summary>
+            查询腾讯云中，文件是否存在
+            </summary>
+            <param name="desFilePath">腾讯云相对路径，存储桶后面的路径，包括文件后缀，比如 /Test/test.jpg</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.WebApi.SwaggerHelper.CustomApiVersion.ApiVersions">
+            <summary>
+            Api接口版本 自定义
+            </summary>
+        </member>
+        <member name="F:Ceres.WebApi.SwaggerHelper.CustomApiVersion.ApiVersions.V1">
+            <summary>
+            V1 版本
+            </summary>
+        </member>
+        <member name="F:Ceres.WebApi.SwaggerHelper.CustomApiVersion.ApiVersions.V2">
+            <summary>
+            V2 版本
+            </summary>
+        </member>
+    </members>
+</doc>

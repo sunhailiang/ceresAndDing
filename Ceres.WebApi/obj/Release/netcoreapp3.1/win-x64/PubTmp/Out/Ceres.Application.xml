@@ -1,0 +1,1219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ceres.Application</name>
+    </assembly>
+    <members>
+        <member name="M:Ceres.Application.Services.AnswerAppService.GetOneCustomerMecuryAnswerList(System.Guid,System.Guid,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            私有方法，获取指定客户的指定回答列表
+            </summary>
+            <param name="questionnaireGuid"></param>
+            <param name="oid"></param>
+            <param name="skipCount"></param>
+            <param name="takeCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ceres.Application.Services.AnswerAppService.GetOneCustomerPhysique(System.Guid)">
+            <summary>
+            ------来源于Mercury程序中【TraditionalMedicalConstitutionController】
+            </summary>
+            <param name="oid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ceres.Application.Services.AnswerAppService.Question">
+            <summary>
+            问题模型
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.Services.AnswerAppService.QuestionConstitution">
+            <summary>
+            问题GUID-辩证体质关系对
+            </summary>
+        </member>
+        <member name="M:Ceres.Application.Services.AnswerAppService.GetScore(System.Guid,System.String,Ceres.Application.Services.AnswerAppService.QuestionConstitution[])">
+            <summary>
+            传入问题Guid和用户回答JsonString，计算分数
+            </summary>
+            <param name="questionGuid"></param>
+            <param name="answerContent"></param>
+            <param name="questionConstitutions"></param>
+            <returns>分数</returns>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.OID">
+            <summary>
+            代理OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.UserName">
+            <summary>
+            代理名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.Sex">
+            <summary>
+            代理性别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.Cellphone">
+            <summary>
+            代理手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.Image">
+            <summary>
+            代理头像
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.Province">
+            <summary>
+            所在省
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetAgenterListResponse.City">
+            <summary>
+            所在市
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerAssistDingRequest.CustomerOid">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerAssistDingRequest.SupporterOid">
+            <summary>
+            客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerAssistDingRequest.AssistDate">
+            <summary>
+            协助打卡日期
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerAssistDingRequest.AssistDing">
+            <summary>
+            打卡列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MiddleAssistDing.QuestionOID">
+            <summary>
+            问题OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MiddleAssistDing.AnswerContent">
+            <summary>
+            回答
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.OID">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.Sex">
+            <summary>
+            客户性别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.Age">
+            <summary>
+            客户年龄
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.Province">
+            <summary>
+            所在省
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.City">
+            <summary>
+            所在城市
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.InitHeight">
+            <summary>
+            客户身高（单位cm）
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.InitWeight">
+            <summary>
+            客户体重（单位kg）
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.SupporterOid">
+            <summary>
+            客服Oid
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.JobName">
+            <summary>
+            工作名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.JobStrength">
+            <summary>
+            工作强度等级
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.ServiceOid">
+            <summary>
+            客户服务OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerRequest.AgenterOid">
+            <summary>
+            归属代理OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerBMI.RecordTime">
+            <summary>
+            记录时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerBMI.BMI">
+            <summary>
+            BMI数值
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.OID">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.ID">
+            <summary>
+            客户当前ID编号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.Sex">
+            <summary>
+            客户性别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.Age">
+            <summary>
+            客户年龄
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.Province">
+            <summary>
+            所在省
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.City">
+            <summary>
+            所在市
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.ServiceName">
+            <summary>
+            服务类别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.SupporterName">
+            <summary>
+            归属客服
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerByPage.AgenterName">
+            <summary>
+            归属代理
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerHeight.RecordTime">
+            <summary>
+            记录时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerHeight.Height">
+            <summary>
+            身高数值，单位cm，范围为50cm～300cm，不在范围内，按照0cm处理
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.CustomerPhysique">
+            <summary>
+            体质测试结果
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerPhysique.RecordTime">
+            <summary>
+            记录时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerPhysique.PhysiqueStatus">
+            <summary>
+            体质测试是否完整状态，0表示完整，-1表示不完整
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerPhysique.PhysiqueDescription">
+            <summary>
+            体质测试是否完整描述
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerPhysique.Physique">
+            <summary>
+            体质结果列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerWeight.RecordTime">
+            <summary>
+            记录时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CustomerWeight.Weight">
+            <summary>
+            体重数值，单位kg，范围为30kg～300kg，不在范围内，按照0kg处理
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerAssistDingRequest.FirstAnswerGuid">
+            <summary>
+            第一个回答问题的OID，用于追溯，助于删除本次打卡记录
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.Ding">
+            <summary>
+            打卡详情
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Ding.QuestionGuid">
+            <summary>
+            打卡问题的OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Ding.Question">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Ding.QuestionType">
+            <summary>
+            问题类型
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Ding.Answer">
+            <summary>
+            答案
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Ding.CreateTime">
+            <summary>
+            回答时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.OID">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.Sex">
+            <summary>
+            客户性别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.Age">
+            <summary>
+            客户年龄
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.InitHeight">
+            <summary>
+            客户身高（单位cm）
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.InitWeight">
+            <summary>
+            客户体重（单位kg）
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.Province">
+            <summary>
+            所在省
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.City">
+            <summary>
+            所在市
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.ServiceName">
+            <summary>
+            服务类别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.ServiceOid">
+            <summary>
+            服务OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.SupporterName">
+            <summary>
+            归属客服
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.AgenterName">
+            <summary>
+            归属代理
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBasicInformationResponse.JobName">
+            <summary>
+            职业
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerBMIListResponse.BMIList">
+            <summary>
+            BMI列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerDailyEnergyResponse.Value">
+            <summary>
+            能量数值
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerDailyEnergyResponse.Unit">
+            <summary>
+            能量单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerPhysiqueResponse.CustomerPhysique">
+            <summary>
+            体质测试结果
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneCustomerWeightListResponse.WeightList">
+            <summary>
+            体重列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.OID">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.Sex">
+            <summary>
+            客户性别
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.Age">
+            <summary>
+            客户年龄
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.InitHeight">
+            <summary>
+            客户身高（单位cm）
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.InitWeight">
+            <summary>
+            客户体重（单位kg）
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.Province">
+            <summary>
+            所在省
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.City">
+            <summary>
+            所在市
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneOriginalCustomerResponse.IsVip">
+            <summary>
+            当前用户是否为VIP
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.MecuryAnswer">
+            <summary>
+            问答详情
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MecuryAnswer.QuestionGuid">
+            <summary>
+            问题的OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MecuryAnswer.Question">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MecuryAnswer.Answer">
+            <summary>
+            答案
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MecuryAnswer.CreateTime">
+            <summary>
+            回答时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerDingByPage.ID">
+            <summary>
+            打卡当前ID编号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerDingByPage.DingTime">
+            <summary>
+            打卡时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerDingByPage.Assister">
+            <summary>
+            协助打卡人
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerDingByPage.FirstAnswerGuid">
+            <summary>
+            第一个回答问题的OID，用于追溯，助于删除本次打卡记录
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerDingByPage.DingList">
+            <summary>
+            打卡详情列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerMecuryAnswerByPage.AnswerTime">
+            <summary>
+            问答开始时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerMecuryAnswerByPage.FirstAnswerGuid">
+            <summary>
+            第一个回答问题的OID，用于追溯，助于删除本次打卡记录
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerMecuryAnswerByPage.MecuryAnswerList">
+            <summary>
+            问答详情列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerPhysiqueByPage.ID">
+            <summary>
+            当前ID编号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerPhysiqueByPage.RecordTime">
+            <summary>
+            记录时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerPhysiqueByPage.PhysiqueStatus">
+            <summary>
+            体质测试是否完整状态，0表示完整，-1表示不完整
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerPhysiqueByPage.PhysiqueDescription">
+            <summary>
+            体质测试是否完整描述
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.OneCustomerPhysiqueByPage.Physique">
+            <summary>
+            体质结果列表
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.Physique">
+            <summary>
+            单个体质结果
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Physique.Title">
+            <summary>
+            体质状态
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Physique.CurrentCent">
+            <summary>
+            转化分
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Physique.StandCent">
+            <summary>
+            标准分
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Physique.DescriptionText">
+            <summary>
+            建议
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryCustomerListByPageResponse.CustomerList">
+            <summary>
+            客户列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDingListByPageResponse.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDingListByPageResponse.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDingListByPageResponse.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDingListByPageResponse.DingList">
+            <summary>
+            打卡列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerPhysiqueListByPageResponse.PhysiqueList">
+            <summary>
+            体质测试结果列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.UploadDingPicRequest.Base64Pic">
+            <summary>
+            上传的Base64数组
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.UploadDingPicResponse.RemoteCommonPath">
+            <summary>
+            上传图片的远程路径，不包括文件名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.UploadDingPicResponse.DingPicList">
+            <summary>
+            上传图片列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DingPic.OriginalName">
+            <summary>
+            原来上传的图片的名称，包括后缀
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DingPic.RemoteOid">
+            <summary>
+            远程图片OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DingPic.RemoteName">
+            <summary>
+            远程图片名称，包括后缀
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.ClassifyFood">
+            <summary>
+            食材类型
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.ClassifyFood.Classify">
+            <summary>
+            食材分类
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.ClassifyFood.FoodList">
+            <summary>
+            食材列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.DietOid">
+            <summary>
+            当前配餐OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.CustomerOid">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.ServiceOid">
+            <summary>
+            服务OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.RecommendDailyEnergy">
+            <summary>
+            每日推荐能量数值（xxkcal），包含单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.RecommendDailyComponentPercentage">
+            <summary>
+            每日推荐营养成分列表，包括3大营养素百分比，Json数据
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.RecommendDailyFoodComponent">
+            <summary>
+            每日推荐营养成分，包括早中晚3大营养素g数，Json数据
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.CurrentDailyEnergy">
+            <summary>
+            实际能量数值（xxkcal），包含单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.CurrentDailyComponentPercentage">
+            <summary>
+            实际营养成分列表，包括3大营养素百分比，查询字符串拼接方式
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.CurrentDiet">
+            <summary>
+            当前推荐食材，包括早中晚，Json数据
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDietRequest.SupporterOid">
+            <summary>
+            客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDislikeFoodRequest.CustomerOid">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDislikeFoodRequest.OperaterOid">
+            <summary>
+            客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.CreateOneCustomerDislikeFoodRequest.DislikeFoodList">
+            <summary>
+            不喜欢食材列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerDietRequest.OID">
+            <summary>
+            食谱OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerDietRequest.DiscardReason">
+            <summary>
+            食谱删除原因
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerDietRequest.LastOperateOid">
+            <summary>
+            最后操作的客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerDietRequest.DislikeList">
+            <summary>
+            客户不喜欢的食物列表
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.DislikeFood">
+            <summary>
+            客户不喜欢的食物
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DislikeFood.FoodOid">
+            <summary>
+            食材OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerDislikeFoodRequest.CustomerOid">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DeleteOneCustomerDislikeFoodRequest.DislikeFoodList">
+            <summary>
+            不喜欢食材列表
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.Diet">
+            <summary>
+            食谱
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.OID">
+            <summary>
+            食谱OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.ID">
+            <summary>
+            食谱当前ID编号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.RecommendDailyEnergy">
+            <summary>
+            每日推荐能量数值（xxkcal），包含单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.CurrentDailyEnergy">
+            <summary>
+            实际能量数值（xxkcal），包含单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.CurrentDiet">
+            <summary>
+            当前推荐食材，包括早中晚，Json数据
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.SupporterName">
+            <summary>
+            客服名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.Status">
+            <summary>
+            食谱状态
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.StatusDescription">
+            <summary>
+            食谱状态描述
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.DietNote">
+            <summary>
+            食谱备注
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.LastOperater">
+            <summary>
+            最后操作人
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Diet.LatOperateTime">
+            <summary>
+            最后操作时间
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DietByPage.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DietByPage.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DietByPage.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.DislikeFoodByPage">
+            <summary>
+            不喜欢的食材
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DislikeFoodByPage.ID">
+            <summary>
+            食材当前ID编号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DislikeFoodByPage.OID">
+            <summary>
+            食材OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.DislikeFoodByPage.Name">
+            <summary>
+            食材名称
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.Food">
+            <summary>
+            食材
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Food.OID">
+            <summary>
+            食材OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Food.Name">
+            <summary>
+            食材名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Food.Value">
+            <summary>
+            食材数值
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Food.Unit">
+            <summary>
+            食材单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Food.Click">
+            <summary>
+            食材重要性
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.Food.FoodComponentList">
+            <summary>
+            食材营养成分列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodByPage.ID">
+            <summary>
+            食材当前ID编号
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.FoodComponent">
+            <summary>
+            营养成分
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodComponent.Name">
+            <summary>
+            营养成分名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodComponent.EnglishName">
+            <summary>
+            营养成分英文名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodComponent.NameCode">
+            <summary>
+            营养成分简称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodComponent.Value">
+            <summary>
+            营养成分数值
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodComponent.Unit">
+            <summary>
+            营养成分单位
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetComponentPercentageByDailyEnergyResponse.ComponentList">
+            <summary>
+            每日营养成分列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetDailyFoodComponentResponse.MealList">
+            <summary>
+            每日营养成分列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetRecommendFoodResponse.ClassifyFoodList">
+            <summary>
+            食材类型列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MealFoodComponent.Name">
+            <summary>
+            每餐名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MealFoodComponent.EnglishName">
+            <summary>
+            每餐英文名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.MealFoodComponent.ComponentList">
+            <summary>
+            每餐营养成分列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryDietListByPageResponse.DietList">
+            <summary>
+            食谱列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryDislikeFoodListByPageResponse.DislikeFoodList">
+            <summary>
+            不喜欢的食材列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryFoodListByPageResponse.FoodList">
+            <summary>
+            食材列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryFoodListWithDislikeFlagByPageResponse.FoodList">
+            <summary>
+            食材列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodWithDislikeFlagByPage.ID">
+            <summary>
+            食材当前ID编号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodWithDislikeFlagByPage.OID">
+            <summary>
+            食材OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodWithDislikeFlagByPage.Name">
+            <summary>
+            食材名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodWithDislikeFlagByPage.Click">
+            <summary>
+            食材重要性
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodWithDislikeFlagByPage.CustomerDislikeStatus">
+            <summary>
+            客户是否喜欢状态，0表示正常，-1表示客户不喜欢
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.FoodWithDislikeFlagByPage.CustomerDislikeDescription">
+            <summary>
+            客户是否喜欢描述
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDietListByPageResponse.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDietListByPageResponse.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDietListByPageResponse.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.QueryOneCustomerDietListByPageResponse.DietList">
+            <summary>
+            食谱列表
+            </summary>
+        </member>
+        <member name="T:Ceres.Application.ViewModels.PageModel`1">
+            <summary>
+            通用分页
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.PageModel`1.PageIndex">
+            <summary>
+            页码索引
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.PageModel`1.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.PageModel`1.DataCount">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.PageModel`1.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.PageModel`1.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetServiceListResponse.OID">
+            <summary>
+            服务OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetServiceListResponse.Name">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetServiceListResponse.Description">
+            <summary>
+            服务描述
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetServiceListResponse.Image">
+            <summary>
+            服务图片
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDietListByDailyPageResponse.TodoDate">
+            <summary>
+            指定日期
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDietListByDailyPageResponse.SupporterName">
+            <summary>
+            归属客服
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDietListByDailyPageResponse.TodoDietList">
+            <summary>
+            每日配餐未完成列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDietListCountByDailyResponse.TodoDate">
+            <summary>
+            指定日期
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDietListCountByDailyResponse.SupporterName">
+            <summary>
+            归属客服
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDietListCountByDailyResponse.TodoDietCount">
+            <summary>
+            每日配餐未完成数量
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDingListByDailyPageResponse.TodoDate">
+            <summary>
+            指定日期
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDingListByDailyPageResponse.SupporterName">
+            <summary>
+            归属客服
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDingListByDailyPageResponse.TodoDingList">
+            <summary>
+            每日打卡未完成列表
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDingListCountByDailyResponse.TodoDate">
+            <summary>
+            指定日期
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDingListCountByDailyResponse.SupporterName">
+            <summary>
+            归属客服
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetOneSupporterTodoDingListCountByDailyResponse.TodoDingCount">
+            <summary>
+            每日打卡未完成数量
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetSupporterListResponse.OID">
+            <summary>
+            客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetSupporterListResponse.LoginName">
+            <summary>
+            客服用户名
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetSupporterListResponse.UserName">
+            <summary>
+            客服真实名称，非客服用户名
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.GetSupporterListResponse.Image">
+            <summary>
+            客服头像
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.SupporterLoginRequest.LoginID">
+            <summary>
+            客服用户名，或者客服电话号码
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.SupporterLoginRequest.Password">
+            <summary>
+            客服密码
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.SupporterLoginResponse.OID">
+            <summary>
+            客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.SupporterLoginResponse.UserName">
+            <summary>
+            客服真实名称，非客服用户名
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.SupporterLoginResponse.Image">
+            <summary>
+            客服头像
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.TodoListByPage.UserOid">
+            <summary>
+            客户OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.TodoListByPage.UserName">
+            <summary>
+            客户名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.TodoListByPage.Cellphone">
+            <summary>
+            客户手机号
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.TodoListByPage.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.UpdateSupporterPasswordRequest.OID">
+            <summary>
+            客服OID
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.UpdateSupporterPasswordRequest.OldPassword">
+            <summary>
+            客服旧密码
+            </summary>
+        </member>
+        <member name="P:Ceres.Application.ViewModels.UpdateSupporterPasswordRequest.NewPassword">
+            <summary>
+            客服新密码
+            </summary>
+        </member>
+    </members>
+</doc>
